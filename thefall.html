@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mi Amor</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@1,400&display=swap" rel="stylesheet">
+
+<link href="css/2.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+    <div id="content">
+        <div id="button-container">
+        <a href="theremembrance.html" class="custom-button">Next One</a>
+        </div>
+        <div id="code">
+            <span class="comments">/**</span><br />
+            <span class="space"/><span class="comments">THE Fall</span><br />
+            <span class="comments">**/</span><br />
+			<br>
+            I fell for someone<br />
+            For Someone, I Shouldn't have.<br />
+            <br>
+            <span class="comments">Its a Sin, I know</span><br />
+            But what's a <span class="comments">sin</span> if never<br />
+			comitted? <br/>
+            <br>
+            But then what is <span class="comments">love</span><br />
+            If it is never confessed?<br/>
+            <br>
+            <span class="comments">Does God hate us </span>or<br />
+            tells us that there are things<br />
+            that are never meant to be?<br/>
+			<br>
+            I'm going to <span class="comments">hell...</span><br />
+			For I fell<br />
+			For someone<br />
+			For someone, <span class="comments">I shouldn't have.</span><br />
+            <br>
+			<span class="comments">~The one who fell</span><br />
+			
+			<span class="space"/><span class="comments">--- END OF POEM ---</span><br />
+        </div>
+        
+        <div id="loveHeart">
+			<div id="garden">
+				<img id="loveImage" src="images/thefall.jpg" alt="Love Image" width="250" height="250"/>
+			</div>
+			<div id="words">
+				<div id="messages">
+					
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					<br/>
+					<div class="signature"></div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+</div>
+
+<script type="text/javascript">
+if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend using Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+    $("#copyright").css("position", "absolute");
+    $("#copyright").css("bottom", "10px");
+    document.execCommand("stop");
+} else {
+    setTimeout(function () {
+        startHeartAnimation();
+    }, 5000);
+
+    setInterval(function () {
+        timeElapse(new Date());
+    }, 500);
+
+    adjustCodePosition();
+    $("#code").typewriter();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mi Amor</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+<link href="css/5.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+    <div id="content">
+        <div id="button-container">
+        <a href="whereiendandyoubegin.html" class="custom-button">Next One</a>
+        </div>
+        <div id="code">
+            <span class="comments">/**</span><br />
+    <span class="space"/><span class="comments">Waiting Till the End</span><br />
+    <span class="comments">**/</span><br />
+    <br>
+    It has been so many <span class="comments">days</span>,<br />
+    so many <span class="comments">nights</span> where the <span class="comments">moon dims</span>,<br />
+    so many <span class="comments">mornings</span> where the <span class="comments">sun rises</span><br />
+    but never <span class="comments">reaches me</span>.<br />
+    <br>
+    You were here once<br />
+    <span class="keyword">real</span>, <span class="keyword">warm</span>, breathing against me,<br />
+    your touch <span class="comments">filling the emptiness</span>.<br />
+    <br>
+    Yet the world, <span class="keyword">cruel</span> and <span class="keyword">unyielding</span>,<br />
+    tore you away,<br />
+    bound you in <span class="comments">chains of fear and control</span>,<br />
+    hands that should have held you,<br />
+    but only <span class="comments">suffocated</span>.<br />
+    <br>
+    Why must <span class="comments">kindness suffer</span>?<br />
+    Why must the one who gave me <span class="comments">life</span><br />
+    bear such <span class="keyword">weight</span>?<br />
+    <br>
+    I reach for you in the <span class="comments">dark</span>,<br />
+    but grasp only <span class="comments">absence</span>.<br />
+    Yet if <span class="comments">love</span> could shatter walls,<br />
+    I would tear through every restraint<br />
+    to bring you <span class="keyword">home</span>.<br />
+    <br>
+    But you endur.e<br />
+    a <span class="keyword">caged bird</span> who knows the <span class="comments">sky</span>,<br />
+    a <span class="keyword">wildflower</span> crushed yet unbroken,<br />
+    a <span class="keyword">flame</span> bending in the <span class="comments">wind</span>,<br />
+    never extinguished.<br />
+    <br>
+    <span class="comments">Love does not break.</span><br />
+    It waits. It survives.<br />
+    <br>
+    And so I wait.<br />
+    with every <span class="comments">breath</span>, every <span class="comments">heartbeat</span>,<br />
+    holding you in the <span class="comments">quiet spaces</span><br />
+    where no one can take you from me.<br />
+    <br>
+    And when the <span class="comments">day comes</span>,<br />
+    when your <span class="comments">chains</span> are dust,<br />
+    I will be here.<br />
+    loving you, waiting for you, always.<br />
+    <br>
+    <span class="comments">Yours truly,</span><br />
+    <span class="comments">despite the distance.</span><br />
+    <br>
+    <span class="space"/><span class="comments">--- END OF POEM ---</span><br />
+</div>
+        
+        <div id="loveHeart">
+			<div id="garden">
+				<img id="loveImage" src="images/waitingtilltheend.jpg" alt="Love Image" width="250" height="250"/>
+			</div>
+			<div id="words">
+				<div id="messages">
+					
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					<br/>
+					<div class="signature"></div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+</div>
+
+<script type="text/javascript">
+if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend using Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+    $("#copyright").css("position", "absolute");
+    $("#copyright").css("bottom", "10px");
+    document.execCommand("stop");
+} else {
+    setTimeout(function () {
+        startHeartAnimation();
+    }, 5000);
+
+    setInterval(function () {
+        timeElapse(new Date());
+    }, 500);
+
+    adjustCodePosition();
+    $("#code").typewriter();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mi Amor</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+<link href="css/8.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+    <div id="content">
+        <div id="button-container">
+        <a href="whatisbeautyifnotyou.html" class="custom-button">Next One</a>
+        </div>
+        <div id="code">
+            <span class="comments">/**</span><br />
+            <span class="space"/><span class="comments">The Mercy in Love</span><br />
+            <span class="comments">**/</span><br />
+            <br />
+            Love is <span class="keyword">not a shield</span>.<br />
+            It is the <span class="comments">sword</span> I hand you,<br />
+            <span class="keyword">hilt first</span>,<br />
+            trusting you won’t <span class="keyword">turn the blade</span>.<br />
+            <br />
+            I <span class="keyword">undress</span> my armor in your gaze,<br />
+            knowing full well<br />
+            you could <span class="comments">kill</span> the vulnerable man beneath —<br />
+            but you <span class="keyword">never do</span>.<br />
+            <br />
+            You touch like a <span class="comments">storm</span> that’s learned <span class="keyword">restraint</span>,<br />
+            hands trembling with <span class="comments">power</span><br />
+            you <span class="keyword">refuse</span> to wield cruelly.<br />
+            <br />
+            Your <span class="comments">mouth</span> —<br />
+            it could <span class="comments">write elegies</span> in <span class="comments">blood</span>,<br />
+            could <span class="keyword">bruise</span>,<br />
+            could <span class="keyword">bite</span>,<br />
+            could leave <span class="comments">proof</span> of its conquest<br />
+            on the <span class="comments">canvas</span> of my skin.<br />
+            <br />
+            But instead,<br />
+            it <span class="keyword">worships</span>.<br />
+            <br />
+            You hold me <span class="comments">firmly</span>,<br />
+            not to <span class="comments">silence</span> —<br />
+            but to <span class="keyword">steady</span> the moan<br />
+            as I <span class="keyword">fall apart</span> in your hands.<br />
+            <br />
+            I <span class="comments">ruin</span> in your grasp,<br />
+            and still,<br />
+            you <span class="keyword">rebuild me</span> with your breath.<br />
+            <br />
+            There is <span class="comments">mercy</span> in my mouth.<br />
+            There is <span class="comments">safety</span> in your surrender.<br />
+            And I,<br />
+            made of <span class="comments">glass</span> and <span class="comments">longing</span>,<br />
+            would <span class="keyword">shatter gladly</span><br />
+            knowing you’d <span class="keyword">gather every piece</span>.<br />
+            <br />
+            Because <span class="comments">real love</span> isn’t <span class="comments">soft</span>.<br />
+            It is <span class="keyword">sharp</span>.<br />
+            But it <span class="keyword">never cuts without consent</span>.<br />
+            <br />
+            <span class="comments">--- END OF POEM ---</span><br />
+        </div>
+        
+        
+        
+        <div id="loveHeart">
+			<div id="garden">
+				<img id="loveImage" src="images/themercyinlove.png" alt="Love Image" width="250" height="250"/>
+			</div>
+			<div id="words">
+				<div id="messages">
+					
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					<br/>
+					<div class="signature"></div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+</div>
+
+<script type="text/javascript">
+if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend using Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+    $("#copyright").css("position", "absolute");
+    $("#copyright").css("bottom", "10px");
+    document.execCommand("stop");
+} else {
+    setTimeout(function () {
+        startHeartAnimation();
+    }, 5000);
+
+    setInterval(function () {
+        timeElapse(new Date());
+    }, 500);
+
+    adjustCodePosition();
+    $("#code").typewriter();
+}
+</script>
+</body>
+</html>

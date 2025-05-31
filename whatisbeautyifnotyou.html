@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mi Amor</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+<link href="css/9.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+    <div id="content">
+        <div id="button-container">
+        <a href="index.html" class="custom-button">Next One</a>
+        </div>
+        <div id="code">
+            <span class="comments">/**</span><br />
+            <span class="space"/><span class="comments">What Is Beauty, If Not You</span><br />
+            <span class="comments">**/</span><br /><br />
+          
+            What is <span class="comments">beauty,</span><br />
+            if not <span class="keyword">you</span>?<br />
+            If not the way  <span class="comments">your voice</span><br />
+            feels like a <span class="comments">meadow</span> before <span class="keyword">wind,</span><br />
+            or how your <span class="keyword">laughter</span><br />
+            cracks silence like <span class="keyword">sunlight</span> through <span class="comments">shutters.</span><br /><br />
+          
+            The world tried to teach me <span class="comments">beauty</span><br />
+            through <span class="keyword">paintings, poetry, spring’s bloom</span><br />
+            but I didn’t learn<br />
+            until I met <span class="keyword">you</span>.<br /><br />
+          
+            Now, when <span class="comments">petals</span> unfurl,<br />
+            I see <span class="keyword">your </span>fingers,<br />
+            gentle as <span class="comments">rain</span> on <span class="comments">glass.</span><br />
+            When dawn gilds the clouds,<br />
+            I remember <span class="keyword">your skin</span><br />
+            kissed by <span class="comments">light,</span><br />
+            as if <span class="keyword">morning</span> was made to reflect <span class="keyword">you</span>.<br /><br />
+          
+            Soon, miles will fold<br />
+            between <span class="keyword">your </span>breath and <span class="comments">mine.</span><br />
+            I’ll walk under foreign skies,<br />
+            cradle silence in new winds—<br />
+            but even then:<br /><br />
+          
+            I’ll see <span class="keyword">you</span> in the snow,<br />
+            each flake a whisper of <span class="keyword">your</span> touch.<br />
+            In <span class="comments">Finland’s</span> endless white,<br />
+            <span class="keyword">you’ll</span> bloom in <span class="comments">my memory</span><br />
+            like wildflowers in frost.<br /><br />
+          
+            When auroras dance,<br />
+            they won’t dazzle—<br />
+            they’ll remind me<br />
+            of <span class="keyword">your eyes,</span><br />
+            <span class="keyword">your spirit,</span><br />
+            of that one night <span class="keyword">you</span> looked at <span class="comments">me</span><br />
+            like I was worth loving.<br /><br />
+          
+            What is <span class="comments">beauty,</span><br />
+            if not the <span class="comments">ache</span> of missing <span class="keyword">you</span><br />
+            in everything <span class="comments">breathtaking?</span><br /><br />
+          
+            <span class="keyword">You are the measure</span><br />
+            of all that is <span class="comments">lovely.</span><br />
+            The poem that writes itself<br />
+            into every landscape I touch.<br /><br />
+          
+            And if they ask me what <span class="comments">beauty</span> is,<br />
+            I’ll say—<br />
+            <span class="keyword">it’s how she looked at</span><span class="comments"> me</span><br />
+            <span class="keyword">like I was </span><span class="comments">her home,</span><br />
+            <span class="keyword">just before</span> <span class="comments">I had to leave.</span><br /><br />
+          
+            You're the pulse behind every poem I'll write<br />
+            just to survive your absence.<br />
+            you are not just <span class="comments">beautiful-</span><br />
+            you are why <span class="comments">beauty exists</span>.<br /><br />
+
+            <span class="comments">--- END OF POEM ---</span><br />
+          </div>          
+        
+        
+        <div id="loveHeart">
+			<div id="garden">
+				<img id="loveImage" src="images/whatisbeautyifnotyou.png" alt="Love Image" width="250" height="250"/>
+			</div>
+			<div id="words">
+				<div id="messages">
+					
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					<br/>
+					<div class="signature"></div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+</div>
+
+<script type="text/javascript">
+if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend using Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+    $("#copyright").css("position", "absolute");
+    $("#copyright").css("bottom", "10px");
+    document.execCommand("stop");
+} else {
+    setTimeout(function () {
+        startHeartAnimation();
+    }, 5000);
+
+    setInterval(function () {
+        timeElapse(new Date());
+    }, 500);
+
+    adjustCodePosition();
+    $("#code").typewriter();
+}
+</script>
+</body>
+</html>
