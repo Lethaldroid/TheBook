@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mi Amor</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap" rel="stylesheet">
+
+<link href="css/10.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+    <div id="content">
+        <div id="button-container">
+        <a href="index.html" class="custom-button">Next One</a>
+        </div>
+        <div id="code">
+            <span class="space"/><span class="comments">/** Stormproof **/</span><br /><br />
+        
+            You think <span class="keyword">we break</span><br />
+            every time we <span class="keyword">bend.</span><br />
+            That cracks mean <span class="comments">collapse</span><br />
+            but love isn't <span class="comments">porcelain</span>.<br />
+            It’s <span class="comments">weathered wood,</span><br />
+            seasoned by <span class="comments">storms,</span><br />
+            still holding up the <span class="keyword">roof</span><br />
+            we built with our <span class="keyword">names</span>.<br /><br />
+        
+            You try to <span class="keyword">fix the thunder</span>.<br />
+            Smooth the <span class="comments">lightning</span>.<br />
+            Make the sky <span class="comments">apologize</span><br />
+            for being a <span class="keyword">sky</span>.<br />
+            But listen<br />
+            I never asked for <span class="keyword">forever clear</span>.<br />
+            Just for <span class="keyword">you</span><br />
+            to be my <span class="keyword">shelter</span><br />
+            when it <span class="comments">rains</span>.<br /><br />
+        
+            We forget the <span class="comments">third-last fights</span><br />
+            because it was just<br />
+            a <span class="keyword">ripple in the river</span>.<br />
+            Not the <span class="comments">flood</span>.<br />
+            Not the <span class="comments">end</span>.<br />
+            And what I remember<br />
+            is how you made me <span class="keyword">laugh</span><br />
+            the day after<br />
+            how you danced<br />
+            in the <span class="comments">debris</span>.<br /><br />
+        
+            Do I love you<br />
+            and go fight <span class="comments">someone else</span>?<br />
+            <span class="keyword">Hell no</span>.<br />
+            You're my <span class="keyword">chaos</span><br />
+            and my <span class="keyword">calm</span>.<br />
+            My <span class="comments">apology</span><br />
+            and my <span class="keyword">anthem</span>.<br />
+            The <span class="keyword">war</span> and the <span class="comments">white flag</span>.<br /><br />
+        
+            <span class="keyword">Yin and </span> <span class="comments">yang</span>,<br />
+            <span class="comments">storm and still</span>.<br />
+            We <span class="keyword">burn</span>.<br />
+            We <span class="keyword">rebuild</span>.<br />
+            And every time,<br />
+            we come <span class="keyword">home</span>.<br /><br />
+        
+            To <span class="keyword">each other</span>.<br /><br />
+        
+            <span class="comments">--- End of Poem ---</span><br />
+        </div>
+                  
+        
+        
+        <div id="loveHeart">
+			<div id="garden">
+				<img id="loveImage" src="images/stormproof.png" alt="Love Image" width="250" height="250"/>
+			</div>
+			<div id="words">
+				<div id="messages">
+					
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					<br/>
+					<div class="signature"></div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+</div>
+
+<script type="text/javascript">
+if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend using Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+    $("#copyright").css("position", "absolute");
+    $("#copyright").css("bottom", "10px");
+    document.execCommand("stop");
+} else {
+    setTimeout(function () {
+        startHeartAnimation();
+    }, 5000);
+
+    setInterval(function () {
+        timeElapse(new Date());
+    }, 500);
+
+    adjustCodePosition();
+    $("#code").typewriter();
+}
+</script>
+</body>
+</html>
