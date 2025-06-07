@@ -100,6 +100,9 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Scroll to the top of the page on load
+            window.scrollTo(0, 0);
+
             // The element where the text will be typed
             const targetElement = document.getElementById('code');
             // The hidden source of the text and its structure
@@ -111,6 +114,9 @@
             // An array of all the nodes (text, <span>, <br>, etc.) inside the source element
             const allNodes = Array.from(sourceElement.childNodes);
             
+            // A counter for line breaks to manage scrolling
+            let lineBreakCounter = 0;
+
             // Hide the source element as it's no longer needed
             sourceElement.style.display = 'none';
 
@@ -129,7 +135,6 @@
                             parentElement.innerHTML += char;
                             // Wait for a short duration before typing the next character
                             await new Promise(resolve => setTimeout(resolve, TYPING_SPEED_MS));
-                            // SCROLLING IS REMOVED FROM HERE
                         }
                     } else if (node.nodeType === Node.ELEMENT_NODE) {
                         // If it's an HTML element...
@@ -138,8 +143,12 @@
                         if (tagName === 'br') {
                             // Re-create the line break.
                             parentElement.appendChild(document.createElement('br'));
-                            // SCROLLING NOW ONLY HAPPENS AFTER A LINE BREAK
-                            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                            lineBreakCounter++; // Increment the line counter
+
+                            // Start scrolling only after 5 lines have been printed
+                            if (lineBreakCounter > 5) {
+                                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                            }
                         } else if (tagName === 'span' || tagName === 'div') {
                             // Re-create the span or div element, copying its classes.
                             const newElement = document.createElement(tagName);
