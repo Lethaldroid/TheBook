@@ -1,39 +1,98 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	
-<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Mi Amor</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@1,400&display=swap" rel="stylesheet">
-
-<link href="css/2.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/garden.js"></script>
-<script type="text/javascript" src="js/functions.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fall</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a styled look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the poem */
+        body {
+            /* Sets a fallback background color that fills the viewport */
+            background-color: #060606;
+        }
+        #code {
+            /* Using Inconsolata for a code-like feel */
+            font-family: "Urbanist", sans-serif;
+            color: #000000; /* A light gray for the main text */
+            font-size: 1.125rem; /* Equivalent to text-lg */
+            line-height: 1.25rem; /* Equivalent to leading-7 */
+            font-weight: bold;
+        }
+        .heading {
+            font-weight: bold;
+            /* Using 'pre' preserves whitespace and line breaks from <br> tags without allowing wrapping */
+            white-space: nowrap;
+        }
+        .poem-body {
+            /* Using 'pre-line' collapses whitespace but respects line breaks for the poem content */
+            white-space: pre-line;
+        }
+        .comments {
+            /* A dimmer color for the "commented" parts */
+            color: #c61a09; 
+            font-style: italic;
+            font-weight: bold;
+        }
+        /* Ensure links inherit the comment color */
+        .comments a {
+            color: inherit;
+        }
+        .space {
+            /* Adds indentation for a code-block feel */
+            margin-left: 1rem;
+        }
+    </style>
 </head>
+<body class="bg-gray-900">
 
-<body>
-<div id="mainDiv">
-    <div id="content">
-        <div id="button-container">
-        <a href="theremembrance.html" class="custom-button">Next One</a>
+    <!-- Background Image Container -->
+    <!-- This div now centers the image within the viewport. -->
+    <div class="fixed inset-0 z-0 flex items-center justify-center bg-[#ffffff]">
+        <!-- The image now uses object-contain to fit within the screen without being cropped. -->
+        <img src="images/thefall.jpg" 
+             alt="A dark, moody rose" 
+             class="w-full h-full object-contain opacity-70"
+             onerror="this.onerror=null;this.src='https://placehold.co/800x1200/000000/FFFFFF?text=Image+Not+Found';">
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="relative min-h-screen flex items-start justify-start py-2 px-4 sm:p-6 md:p-8 z-10">
+        <!-- The glassmorphism card now has padding. -->
+        <div class="bg-gray-1000 bg-opacity-10 backdrop-filter py-2 px-4 rounded-2xl shadow-2xl w-full border border-gray-700" style="backdrop-filter: blur(1px);">
+            <div id="code">
+                <!-- The poem will be "typed" here by the JavaScript below. -->
+            </div>
         </div>
-        <div id="code">
-            <span class="comments">/**</span><br />
-            <span class="space"/><span class="comments">THE Fall</span><br />
-            <span class="comments">**/</span><br />
-			<br>
+    </main>
+    <div id="code">
+        <span class="comments">/**</span><br />
+        <span class="space"/><span class="comments"></span><br />
+        <span class="comments">**/</span><br />
+        <br>
+        
+        <span class="space"/><span class="comments">--- END OF POEM ---</span><br />
+    </div>
+
+    <!-- This hidden div contains the original poem structure. The script will use this as the source. -->
+    <div id="source-code" class="hidden">
+        <div class="heading text-center">
+            <span class="heading comments">--------------------------------</span><br />
+            <a href="theremembrance.html" class="heading comments">THE FALL</a><br />
+            <span class="heading comments">--------------------------------</span><br />
+        </div>
+        <div class="poem-body">
             I fell for someone<br />
             For Someone, I Shouldn't have.<br />
             <br>
             <span class="comments">Its a Sin, I know</span><br />
             But what's a <span class="comments">sin</span> if never<br />
-			comitted? <br/>
+            comitted? <br/>
             <br>
             But then what is <span class="comments">love</span><br />
             If it is never confessed?<br/>
@@ -41,58 +100,93 @@
             <span class="comments">Does God hate us </span>or<br />
             tells us that there are things<br />
             that are never meant to be?<br/>
-			<br>
-            I'm going to <span class="comments">hell...</span><br />
-			For I fell<br />
-			For someone<br />
-			For someone, <span class="comments">I shouldn't have.</span><br />
             <br>
-			<span class="comments">~The one who fell</span><br />
-			
-			<span class="space"/><span class="comments">--- END OF POEM ---</span><br />
-        </div>
-        
-        <div id="loveHeart">
-			<div id="garden">
-				<img id="loveImage" src="images/thefall.jpg" alt="Love Image" width="250" height="250"/>
-			</div>
-			<div id="words">
-				<div id="messages">
-					
-					<div id="elapseClock"></div>
-				</div>
-				<div id="loveu">
-					<br/>
-					<div class="signature"></div>
-				</div>
-			</div>
-		</div>
-		
-    </div>
-</div>
+            I'm going to <span class="comments">hell...</span><br />
+            For I fell<br />
+            For someone<br />
+            For someone, <span class="comments">I shouldn't have.</span><br />
+            <br>
+            <span class="comments">~The one who fell</span><br />
+            <div class="heading text-center">
+            <span class="comments">--------------------------------</span><br />
+            <span class="comments">END OF POEM</span><br />
+            <span class="comments">--------------------------------</span>
+        </div></div></div>
 
-<script type="text/javascript">
-if (!document.createElement('canvas').getContext) {
-    var msg = document.createElement("div");
-    msg.id = "errorMsg";
-    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend using Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
-    document.body.appendChild(msg);
-    $("#code").css("display", "none")
-    $("#copyright").css("position", "absolute");
-    $("#copyright").css("bottom", "10px");
-    document.execCommand("stop");
-} else {
-    setTimeout(function () {
-        startHeartAnimation();
-    }, 5000);
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll to the top of the page on load
+            window.scrollTo(0, 0);
 
-    setInterval(function () {
-        timeElapse(new Date());
-    }, 500);
+            // The element where the text will be typed
+            const targetElement = document.getElementById('code');
+            // The hidden source of the text and its structure
+            const sourceElement = document.getElementById('source-code');
 
-    adjustCodePosition();
-    $("#code").typewriter();
-}
-</script>
+            // Typing speed in milliseconds. Smaller number means faster typing.
+            const TYPING_SPEED_MS = 45;
+
+            // An array of all the nodes (text, <span>, <br>, etc.) inside the source element
+            const allNodes = Array.from(sourceElement.childNodes);
+            
+            // A counter for line breaks to manage scrolling
+            let lineBreakCounter = 0;
+
+            // Hide the source element as it's no longer needed
+            sourceElement.style.display = 'none';
+
+            /**
+             * A recursive function that processes each node from the source.
+             * It types out text nodes, reconstructs element nodes, and auto-scrolls the page.
+             * @param {Node[]} nodes - The array of child nodes to process.
+             * @param {HTMLElement} parentElement - The HTML element to append the content to.
+             */
+            async function typeContent(nodes, parentElement) {
+                for (const node of nodes) {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        // If it's a plain text node, type it out character by character.
+                        const text = node.textContent;
+                        for (const char of text) {
+                            parentElement.innerHTML += char;
+                            // Wait for a short duration before typing the next character
+                            await new Promise(resolve => setTimeout(resolve, TYPING_SPEED_MS));
+                        }
+                    } else if (node.nodeType === Node.ELEMENT_NODE) {
+                        // If it's an HTML element...
+                        const tagName = node.tagName.toLowerCase();
+                        
+                        if (tagName === 'br') {
+                            // Re-create the line break.
+                            parentElement.appendChild(document.createElement('br'));
+                            lineBreakCounter++; // Increment the line counter
+
+                            // Start scrolling only after 5 lines have been printed
+                            if (lineBreakCounter > 5) {
+                                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                            }
+                        } else if (tagName === 'span' || tagName === 'div' || tagName === 'a') {
+                            // Re-create the span, div, or a element, copying its classes and attributes.
+                            const newElement = document.createElement(tagName);
+                            if (node.className) {
+                                newElement.className = node.className;
+                            }
+                            if (tagName === 'a') {
+                                const href = node.getAttribute('href');
+                                if (href) {
+                                    newElement.setAttribute('href', href);
+                                }
+                            }
+                            parentElement.appendChild(newElement);
+                            // Recursively call this function for the element's children.
+                            await typeContent(Array.from(node.childNodes), newElement);
+                        }
+                    }
+                }
+            }
+
+            // Start the typewriter effect
+            typeContent(allNodes, targetElement);
+        });
+    </script>
 </body>
 </html>
