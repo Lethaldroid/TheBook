@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mi Amor</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+<link href="css/6.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+    <div id="content">
+        <div id="button-container">
+        <a href="7.html" class="custom-button">Next One</a>
+        </div>
+        <div id="code">
+            <span class="comments">/**</span><br />
+            <span class="space"/><span class="comments">Where I End and You Begin</span><br />
+            <span class="comments">**/</span><br />
+            <br>
+            <span class="keyword">I want</span> to climb into your lap,<br />
+            <span class="keyword">spill</span> my love between kisses,<br />
+            <span class="keyword">interrupt</span> words with the press of my lips<br />
+            until I <span class="keyword">waste away</span> in your arms.<br />
+            <br>
+            I would <span class="keyword">peel</span> my skin back<br />
+            just to be <span class="keyword">closer</span> when you hold me,<br />
+            <span class="keyword">break</span> my ribs, part the muscle,<br />
+            let my <span class="comments">heart</span> feel more of you—<br />
+            let it <span class="keyword">beat</span> beneath your touch.<br />
+            <br>
+            I would make a <span class="keyword">home</span> out of you,<br />
+            <span class="keyword">dance</span> through its corridors forever,<br />
+            never <span class="keyword">longing</span>, never leaving,<br />
+            only <span class="keyword">living</span> in the warmth of you.<br />
+            <br>
+            <span class="keyword">I want</span> to do everything with you—<br />
+            <span class="comments">sleep</span>, <span class="comments">sing</span>, brush our teeth,<br />
+            shower, travel, make dinner,<br />
+            <span class="keyword">ride</span> bikes like children,<br />
+            walk paths leading <span class="comments">nowhere but us</span>.<br />
+            <br>
+            I would <span class="keyword">crack</span> myself open like a fault line<br />
+            if it meant the <span class="keyword">trembling earth</span> between us<br />
+            could settle into stillness.<br />
+            <br>
+            I would crawl into the <span class="keyword">spaces</span><br />
+            between your breaths,<br />
+            curl into the hollow of your throat,<br />
+            <span class="keyword">live</span> there, safe, surrounded by you.<br />
+            <br>
+            If you asked, I would <span class="keyword">pour</span> myself into you<br />
+            until the <span class="comments">lines</span> between us<br />
+            blurred into <span class="comments">nothing</span>—<br />
+            until you could wear me like a <span class="keyword">second skin</span><br />
+            and never feel this world alone.<br />
+            <br>
+            I would <span class="keyword">break</span> the sky open,<br />
+            <span class="keyword">pour</span> its light into your hands,<br />
+            just to watch its <span class="comments">glow</span> upon your skin.<br />
+            <br>
+            I would <span class="keyword">slip</span> between your ribs,<br />
+            settle beside your <span class="comments">heart</span>,<br />
+            so with every beat,<br />
+            you would hear me whisper—<br />
+            <span class="keyword">I love you.</span><br />
+            <br>
+            <span class="space"/><span class="comments">--- END OF POEM ---</span><br />
+        </div>
+        
+        <div id="loveHeart">
+			<div id="garden">
+				<img id="loveImage" src="warm (vent_).jpeg" alt="Love Image" width="250" height="250"/>
+			</div>
+			<div id="words">
+				<div id="messages">
+					
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					<br/>
+					<div class="signature"></div>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+</div>
+
+<script type="text/javascript">
+if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend using Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+    $("#copyright").css("position", "absolute");
+    $("#copyright").css("bottom", "10px");
+    document.execCommand("stop");
+} else {
+    setTimeout(function () {
+        startHeartAnimation();
+    }, 5000);
+
+    setInterval(function () {
+        timeElapse(new Date());
+    }, 500);
+
+    adjustCodePosition();
+    $("#code").typewriter();
+}
+</script>
+</body>
+</html>
