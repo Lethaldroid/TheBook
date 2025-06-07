@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Black Rose</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a styled look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the poem */
+        body {
+            /* Sets a fallback background color */
+            background-color: #111827;
+        }
+        #code {
+            /* Using Inconsolata for a code-like feel */
+            font-family: 'Inconsolata', monospace;
+            white-space: pre-line; 
+            color: #ffffff; /* A light gray for the main text */
+            font-size: 1.125rem; /* Equivalent to text-lg */
+            line-height: 1.25rem; /* Equivalent to leading-7 */
+        }
+        .comments {
+            /* A dimmer color for the "commented" parts */
+            color: #c61a09; /* Gray-500 */
+            font-style: italic;
+        }
+        .space {
+            /* Adds indentation for a code-block feel */
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- Background Image Container -->
+    <!-- This div holds the background image, which is fixed and covers the whole screen. -->
+    <div class="fixed inset-0 z-0 flex items-center justify-center">
+        <img src="images/index.jpg" 
+             alt="A dark, moody rose" 
+             class="w-full h-full object-cover object-center opacity-30"
+             onerror="this.onerror=null;this.src='https://placehold.co/800x1200/000000/FFFFFF?text=Image+Not+Found';">
+    </div>
+
+    <!-- Main Content Container -->
+    <!-- This div now aligns content to the top-left, with padding acting as margins. -->
+    <main class="relative min-h-screen flex items-start justify-start p-4 sm:p-6 md:p-8 z-10">
+        <!-- The glassmorphism card now has padding. -->
+        <!-- <div class="bg-gray-1000 bg-opacity-10 backdrop-filter backdrop-blur-none p-8 rounded-2xl shadow-2xl w-full border border-gray-700"> -->
+        <div class="bg-gray-1000 bg-opacity-10 backdrop-filter p-8 rounded-2xl shadow-2xl w-full border border-gray-700" style="backdrop-filter: blur(1px);">
+            <div id="code">
+                <!-- The poem will be "typed" here by the JavaScript below. -->
+            </div>
+        </div>
+    </main>
+
+    <!-- This hidden div contains the original poem structure. The script will use this as the source. -->
+    <div id="source-code" class="hidden">
+        <div class="text-center">
+            <span class="comments">--------------------------------</span><br />
+            <span class="comments">THE BLACK ROSE</span><br />
+            <span class="comments">--------------------------------</span><br />
+        </div>
+        Though the black roses<br />
+        Were embroidered on your<br />
+        <span class="comments">Darkened dress, yet</span> somehow they<br />
+        Bloomed in my <span class="comments">heart.</span><br />
+        <br>
+        <span class="comments">What in the world<br />
+        Did you make me feel?</span><br />
+        <br>
+        An eternal dusk,<br />
+        A garden of shadows,<br />
+        A whisper of petals,<br />
+        A bouquet of <span class="comments">moonlight,</span><br />
+        A lost teardrop on velvet,<br />
+        A <span class="comments">word</span> unspoken.<br />
+        <br>
+        Though the black roses<br />
+        Were <span class="comments">just</span> embroidered on your<br />
+        <span class="comments">Darkened dress.</span><br />
+        <span class="comments">~Your Sunflower</span><br />
+        <div class="text-center">
+            <span class="comments">--------------------------------</span><br />
+            <span class="comments">END OF POEM</span><br />
+            <span class="comments">--------------------------------</span><br />
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // The element where the text will be typed
+            const targetElement = document.getElementById('code');
+            // The hidden source of the text and its structure
+            const sourceElement = document.getElementById('source-code');
+
+            // Typing speed in milliseconds. Smaller number means faster typing.
+            const TYPING_SPEED_MS = 45;
+
+            // An array of all the nodes (text, <span>, <br>, etc.) inside the source element
+            const allNodes = Array.from(sourceElement.childNodes);
+            
+            // Hide the source element as it's no longer needed
+            sourceElement.style.display = 'none';
+
+            /**
+             * A recursive function that processes each node from the source.
+             * It types out text nodes, reconstructs element nodes, and auto-scrolls the page.
+             * @param {Node[]} nodes - The array of child nodes to process.
+             * @param {HTMLElement} parentElement - The HTML element to append the content to.
+             */
+            async function typeContent(nodes, parentElement) {
+                for (const node of nodes) {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        // If it's a plain text node, type it out character by character.
+                        const text = node.textContent;
+                        for (const char of text) {
+                            parentElement.innerHTML += char;
+                            // Wait for a short duration before typing the next character
+                            await new Promise(resolve => setTimeout(resolve, TYPING_SPEED_MS));
+                            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                        }
+                    } else if (node.nodeType === Node.ELEMENT_NODE) {
+                        // If it's an HTML element...
+                        const tagName = node.tagName.toLowerCase();
+                        
+                        if (tagName === 'br') {
+                            // Re-create the line break.
+                            parentElement.appendChild(document.createElement('br'));
+                            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                        } else if (tagName === 'span' || tagName === 'div') {
+                            // Re-create the span or div element, copying its classes.
+                            const newElement = document.createElement(tagName);
+                            if (node.className) {
+                                newElement.className = node.className;
+                            }
+                            parentElement.appendChild(newElement);
+                            // Recursively call this function for the element's children.
+                            await typeContent(Array.from(node.childNodes), newElement);
+                        }
+                    }
+                }
+            }
+
+            // Start the typewriter effect
+            typeContent(allNodes, targetElement);
+        });
+    </script>
+</body>
+</html>
