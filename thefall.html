@@ -28,6 +28,7 @@
             font-weight: bold;
             /* Using 'pre' preserves whitespace and line breaks from <br> tags without allowing wrapping */
             white-space: nowrap;
+            font-size:1.5rem;
         }
         .poem-body {
             /* Using 'pre-line' collapses whitespace but respects line breaks for the poem content */
@@ -64,21 +65,13 @@
     <!-- Main Content Container -->
     <main class="relative min-h-screen flex items-start justify-start py-2 px-4 sm:p-6 md:p-8 z-10">
         <!-- The glassmorphism card now has padding. -->
-        <div class="bg-gray-1000 bg-opacity-10 backdrop-filter py-2 px-4 rounded-2xl shadow-2xl w-full border border-gray-700" style="backdrop-filter: blur(1px);">
+        <div class="bg-gray-1000 bg-opacity-10 backdrop-filter py-2 px-4 rounded-2xl shadow-2xl w-full border border-gray-700" style="backdrop-filter: blur(3px);">
             <div id="code">
                 <!-- The poem will be "typed" here by the JavaScript below. -->
             </div>
         </div>
     </main>
-    <div id="code">
-        <span class="comments">/**</span><br />
-        <span class="space"/><span class="comments"></span><br />
-        <span class="comments">**/</span><br />
-        <br>
-        
-        <span class="space"/><span class="comments">--- END OF POEM ---</span><br />
-    </div>
-
+    
     <!-- This hidden div contains the original poem structure. The script will use this as the source. -->
     <div id="source-code" class="hidden">
         <div class="heading text-center">
