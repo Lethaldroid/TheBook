@@ -48,22 +48,22 @@
 
     <!-- Main Content Container -->
     <!-- This div now aligns content to the top-left, with padding acting as margins. -->
-    <main class="relative min-h-screen flex items-start justify-start p-4 sm:p-6 md:p-8 z-10">
+    <main class="relative min-h-screen flex items-start justify-start py-10 px-4 sm:p-6 md:p-8 z-10">
         <!-- The glassmorphism card now has padding. -->
         <!-- <div class="bg-gray-1000 bg-opacity-10 backdrop-filter backdrop-blur-none p-8 rounded-2xl shadow-2xl w-full border border-gray-700"> -->
-        <div class="bg-gray-1000 bg-opacity-10 backdrop-filter p-8 rounded-2xl shadow-2xl w-full border border-gray-700" style="backdrop-filter: blur(1px);">
+        <div class="bg-gray-1000 bg-opacity-10 backdrop-filter py-2 px-4 rounded-2xl shadow-2xl w-full border border-gray-700" style="backdrop-filter: blur(1px);">
             <div id="code">
                 <!-- The poem will be "typed" here by the JavaScript below. -->
             </div>
         </div>
     </main>
-
+    
     <!-- This hidden div contains the original poem structure. The script will use this as the source. -->
     <div id="source-code" class="hidden">
-        <div class="text-center">
-            <span class="comments">--------------------------------</span><br />
-            <span class="comments">THE BLACK ROSE</span><br />
-            <span class="comments">--------------------------------</span><br />
+        <div class="heading text-center m-0 p-0 ">
+            <span class="comments">--------------------------------</span>
+            <span class="comments">THE BLACK ROSE</span>
+            <span class="comments">--------------------------------</span>
         </div>
         Though the black roses<br />
         Were embroidered on your<br />
@@ -85,9 +85,9 @@
         <span class="comments">Darkened dress.</span><br />
         <span class="comments">~Your Sunflower</span><br />
         <div class="text-center">
-            <span class="comments">--------------------------------</span><br />
-            <span class="comments">END OF POEM</span><br />
-            <span class="comments">--------------------------------</span><br />
+            <span class="comments">--------------------------------</span>
+            <span class="comments">END OF POEM</span>
+            <span class="comments">--------------------------------</span>
         </div>
     </div>
 
