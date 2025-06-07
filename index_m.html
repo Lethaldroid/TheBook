@@ -55,7 +55,7 @@
     </div>
 
     <!-- Main Content Container -->
-    <main class="relative min-h-screen flex items-start justify-start py-25 px-4 sm:p-6 md:p-8 z-10">
+    <main class="relative min-h-screen flex items-start justify-start py-20 px-4 sm:p-6 md:p-8 z-10">
         <!-- The glassmorphism card now has padding. -->
         <div class="bg-gray-1000 bg-opacity-10 backdrop-filter py-2 px-4 rounded-2xl shadow-2xl w-full border border-gray-700" style="backdrop-filter: blur(1px);">
             <div id="code">
@@ -70,7 +70,6 @@
             <span class="heading comments">THE BLACK ROSE</span><br />
             <span class="heading comments">--------------------------------</span><br />
         </div><div class="poem-body">
-        <br/>
         Though the black roses<br />
         Were embroidered on your<br />
         <span class="comments">Darkened dress, yet</span> somehow they<br />
@@ -127,7 +126,7 @@
                             parentElement.innerHTML += char;
                             // Wait for a short duration before typing the next character
                             await new Promise(resolve => setTimeout(resolve, TYPING_SPEED_MS));
-                            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                            // SCROLLING IS REMOVED FROM HERE
                         }
                     } else if (node.nodeType === Node.ELEMENT_NODE) {
                         // If it's an HTML element...
@@ -136,6 +135,7 @@
                         if (tagName === 'br') {
                             // Re-create the line break.
                             parentElement.appendChild(document.createElement('br'));
+                            // SCROLLING NOW ONLY HAPPENS AFTER A LINE BREAK
                             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
                         } else if (tagName === 'span' || tagName === 'div') {
                             // Re-create the span or div element, copying its classes.
