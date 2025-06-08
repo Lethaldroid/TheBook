@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     parentElement.appendChild(document.createElement('br'));
                     lineBreakCounter++; // Increment the line counter
 
-                    // Start scrolling only after 5 lines have been printed
-                    if (lineBreakCounter > 5) {
+                    // Start scrolling only after 8 lines have been printed
+                    if (lineBreakCounter > 8) {
                         setTimeout(() => {
                             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
                         }, 50); // A 50ms delay is enough for the browser to catch up.
