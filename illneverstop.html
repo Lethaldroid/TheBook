@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'll Never Stop</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a styled look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the poem */
+        body {
+            /* Sets a fallback background color that fills the viewport */
+            background-color: #060606;
+        }
+        #code {
+            /* Using Inconsolata for a code-like feel */
+            font-family: "Special Elite", system-ui;
+            color: #E0E0E0; /* A light gray for the main text */
+            font-size: 0.9rem; /* Equivalent to text-lg */
+            line-height: 1.0rem; /* Equivalent to leading-7 */
+            font-weight: bold;
+        }
+        .heading {
+            font-weight: bold;
+            /* Using 'pre' preserves whitespace and line breaks from <br> tags without allowing wrapping */
+            white-space: nowrap;
+            font-size:1.0rem;
+            line-height: 1.25rem; /* Equivalent to leading-7 */
+
+        }
+        .poem-body {
+            /* Using 'pre-line' collapses whitespace but respects line breaks for the poem content */
+            white-space: pre-line;
+        }
+        .comments {
+            /* A dimmer color for the "commented" parts */
+            color: #D9A7B0; 
+            font-style: italic;
+            font-weight: bold;
+        }
+        .keyword {
+            color: #7FC7D9;
+            font-weight: bold;
+        }
+        /* Ensure links inherit the comment color */
+        .comments a {
+            color: inherit;
+        }
+        .space {
+            /* Adds indentation for a code-block feel */
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- Background Image Container -->
+    <!-- This div now centers the image within the viewport. -->
+    <div class="fixed inset-0 z-0 flex items-center justify-center bg-[#121413]">
+        <!-- The image now uses object-contain to fit within the screen without being cropped. -->
+        <img src="images/illneverstop.jpg" 
+             alt="A dark, moody rose" 
+             class="w-full h-full object-contain opacity-70"
+             onerror="this.onerror=null;this.src='https://placehold.co/800x1200/000000/FFFFFF?text=Image+Not+Found';">
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="relative min-h-screen flex items-start justify-start py-2 px-4 sm:p-6 md:p-8 z-10">
+        <!-- The glassmorphism card now has padding. -->
+        <div class="bg-gray-800 bg-opacity-30 backdrop-filter py-2 px-4 rounded-2xl shadow-2xl w-full border border-gray-700" style="backdrop-filter: blur(3px);">
+            <div id="code">
+                <!-- The poem will be "typed" here by the JavaScript below. -->
+            </div>
+        </div>
+    </main>
+
+    <!-- This hidden div contains the original poem structure. The script will use this as the source. -->
+    <div id="source-code" class="hidden">
+        <div class="heading text-center">
+            <span class="heading comments">*********</span><br />
+            <a href="index.html" class="heading comments">I’ll Never Stop Loving You</a><br />
+            <span class="heading comments">*********</span><br />
+        </div>
+        <div class="poem-body">
+            <br />
+            <span class="comments">"I wonder if we’ll get used to each other..."</span><br />
+            As if love were a <span class="keyword">trick</span> that time <span class="comments">unmakes</span>.<br />
+            But darling what a <span class="keyword">privilege</span>,<br />
+            to know the <span class="keyword">map of your sighs</span>,<br />
+            to memorize the way your <span class="comments">silence speaks</span>.<br />
+            Let me get used to you <br />
+            the way a <span class="keyword">poet</span> gets used to heartbreak,<br />
+            not because it’s painless <br />
+            but because it’s <span class="comments">worth the ache</span>.<br />
+            <br />
+            <span class="comments">"What if routine makes us forget what we have?"</span><br />
+            What if magic turns into <span class="keyword">habit</span>?<br />
+            Then I will make a <span class="keyword">ritual of wonder</span>.<br />
+            I’ll find <span class="comments">galaxies</span> in your morning breath,<br />
+            <span class="keyword">constellations</span> in your tired eyes,<br />
+            and still ask, years in,<br />
+            "How did I get so <span class="comments">lucky</span>?"<br />
+            <br />
+            <span class="comments">"What if we stop doing the little things?"</span><br />
+            When the world grows <span class="keyword">heavy</span>,<br />
+            and romance fades beneath <span class="comments">bills</span> and <span class="comments">broken sleep</span>.<br />
+            Then I’ll leave you <span class="keyword">love notes</span><br />
+            on <span class="comments">receipts</span> and fogged mirrors,<br />
+            and draw <span class="keyword">constellations</span> on your back<br />
+            just to hear you <span class="comments">breathe differently</span>.<br />
+            <br />
+            <span class="comments">"What if one day… I don’t feel the same?"</span><br />
+            Then I’ll love you <span class="keyword">harder</span> on purpose.<br />
+            I won’t wait for <span class="comments">fireworks</span>.<br />
+            I’ll be the quiet <span class="keyword">match in the dark</span>,<br />
+            the <span class="keyword">slow-burning ember</span> that never dies,<br />
+            warming the parts of you even you <span class="comments">forgot were cold</span>.<br />
+            <br />
+            <span class="comments">"What if we stop trying?"</span><br />
+            Then I’ll try enough for <span class="keyword">both of us</span>.<br />
+            I’ll fight for us on <span class="comments">tired Tuesday nights</span>,<br />
+            hold your hand through <span class="keyword">silences too loud</span>,<br />
+            and <span class="keyword">choose you</span> <br />
+            even when love feels less like a <span class="comments">storm</span>,<br />
+            and more like <span class="keyword">still water</span>.<br />
+            <br />
+            <span class="comments">"What if the madness fades?"</span><br />
+            Then let it.<br />
+            Let it become <span class="keyword">reverence</span>.<br />
+            Let it become a <span class="comments">soft turning of pages</span>,<br />
+            the whisper of a <span class="keyword">thumb brushing a ring</span>.<br />
+            Let love <span class="keyword">grow old with us</span> <br />
+            <span class="comments">wrinkled</span>, wise, and unwavering.<br />
+            <br />
+            Because darling, <span class="keyword">routine</span> is not the end.<br />
+            It’s the <span class="comments">quiet promise</span> beneath the noise.<br />
+            And if I must get used to something,<br />
+            let it be your <span class="keyword">shadow beside mine at dusk</span>,<br />
+            your <span class="comments">voice behind every door I open</span>.<br />
+            Let me get used to your <span class="keyword">yawns</span>,<br />
+            your <span class="comments">late-night ramblings</span>, your morning complaints.<br />
+            Let me get used to your <span class="keyword">everything</span>.<br />
+            <br />
+            Let our love be no <span class="comments">accident</span> <br />
+            Let it be a <span class="keyword">daily decision</span>,<br />
+            etched in <span class="comments">cracked lips</span> and <span class="comments">tired arms</span>,<br />
+            in <span class="keyword">forgiveness</span> and <span class="comments">second chances</span>,<br />
+            in <span class="keyword">burnt toast</span> and shared sunsets.<br />
+            <br />
+            Even when the world <span class="comments">forgets how to love</span>,<br />
+            I will <span class="keyword">remember</span>.<br />
+            I will <span class="keyword">remind you</span>.<br />
+            And on the days we feel <span class="comments">less than magic</span> <br />
+            I’ll look you in the eyes,<br />
+            and whisper like a vow:<br />
+            <br />
+            <span class="keyword">"I still choose you."</span><br />
+            ~Your Forever <br /><br />
+            <div class="heading text-center">
+                <span class="comments">*********</span><br />
+                <span class="comments">END OF POEM</span><br />
+                <span class="comments">*********</span>
+            </div>
+        </div>        
+    </div>
+
+    <script src="typewriter.js"></script>
+</body>
+</html>
