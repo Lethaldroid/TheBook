@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In the Moonlit Nights</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a styled look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the poem */
+        body {
+            /* Sets a fallback background color that fills the viewport */
+            background-color: #0A0606;
+        }
+        #code {
+            /* Using Inconsolata for a code-like feel */
+            font-family: "Special Elite", system-ui;
+            color: #E0E0E0; /* A light gray for the main text */
+            font-size: 0.9rem; /* Equivalent to text-lg */
+            line-height: 1.0rem; /* Equivalent to leading-7 */
+            font-weight: bold;
+        }
+        .heading {
+            font-weight: bold;
+            /* Using 'pre' preserves whitespace and line breaks from <br> tags without allowing wrapping */
+            white-space: nowrap;
+            font-size:1.0rem;
+            line-height: 1.25rem; /* Equivalent to leading-7 */
+
+        }
+        .poem-body {
+            /* Using 'pre-line' collapses whitespace but respects line breaks for the poem content */
+            white-space: pre-line;
+        }
+        .comments {
+            /* A dimmer color for the "commented" parts */
+            color: #c4006f; 
+            font-style: italic;
+            font-weight: bold;
+        }
+        .keyword {
+            color: #1a5cc5;
+            font-weight: bold;
+        }
+        /* Ensure links inherit the comment color */
+        .comments a {
+            color: inherit;
+        }
+        .space {
+            /* Adds indentation for a code-block feel */
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- Background Image Container -->
+    <!-- This div now centers the image within the viewport. -->
+    <div class="fixed inset-0 z-0 flex items-center justify-center bg-[#070202]">
+        <!-- The image now uses object-contain to fit within the screen without being cropped. -->
+        <img src="images/tvgirl.jpeg" 
+             alt="A dark, moody rose" 
+             class="w-full h-full object-contain opacity-70"
+             onerror="this.onerror=null;this.src='https://placehold.co/800x1200/000000/FFFFFF?text=Image+Not+Found';">
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="relative min-h-screen flex items-start justify-start py-2 px-4 sm:p-6 md:p-8 z-10">
+        <!-- The glassmorphism card now has padding. -->
+        <div class="bg-gray-800 bg-opacity-50 backdrop-filter py-2 px-4 rounded-2xl shadow-2xl w-full border border-gray-700" style="backdrop-filter: blur(3px);">
+            <div id="code">
+                <!-- The poem will be "typed" here by the JavaScript below. -->
+            </div>
+        </div>
+    </main>
+
+    <!-- This hidden div contains the original poem structure. The script will use this as the source. -->
+    <div id="source-code" class="hidden">
+        <div class="heading text-center">
+            <span class="heading comments">*********</span><br />
+            <a href="index.html" class="heading comments">In the Moonlit Nights</a><br />
+            <span class="heading comments">*********</span><br />
+        </div>
+        <div class="poem-body">
+            <br />
+            You may as well take my <span class="comments">heart</span>, love,<br />
+            it beats <span class="keyword">your name</span> anyway.<br />
+            What use is a <span class="keyword">lock</span> without the <span class="comments">key</span><br />
+            when you've already made a <span class="comments">home</span> <span class="keyword">inside me?</span><br /><br />
+        
+            We’ll trade <span class="keyword"> rings </span>not just in metal,<br /> 
+            but in <span class="comments">vow</span>, in <span class="comments">vein</span>, in <span class="comments">soul</span>.<br /> 
+            Not to cage or claim,<br /> 
+            but to whisper: <span class="comments">we are <span class="keyword"></span>bound</span></span><br />
+            not in <span class="keyword">chains</span>, but in <span class="comments">choice</span>.<br /><br />
+        
+            <span class="comments">You,</span> still finding your shape<br /> 
+            in this <span class="comments">strange</span>, <span class="keyword">wide</span> world<br /> 
+            I will not hurry your <span class="keyword">bloom</span>.<br /> 
+            I’ll walk beside you<br /> 
+            barefoot through every <span class="comments">question</span>,<br /> 
+            patient as spring waiting for the thaw.<br /><br />
+        
+            And when <span class="keyword">you</span> will find <span class="comments">moonlit nights</span><br />
+            strangely empty, <span class="comments">and</span> you call <span class="keyword">my name</span> into the quiet,<br /> 
+            I swear<br /> 
+            you’ll never find <span class="keyword">silence</span>.<br /> 
+            <span class="comments">There will always be a voice,</span><br />
+            mine <span class="keyword">tender</span>, <span class="keyword">steady</span>, <span class="keyword">certain</span>,<br /> 
+            rising like breath against your ear:<br />
+            <span class="comments">"I'm here."</span><br /><br />
+        
+            Even in the stillest <span class="comments">shadows</span>,<br /> 
+            I’ll be the <span class="comments">echo</span> your doubt can’t silence,<br /> 
+            the weightless <span class="comments">warmth</span> beside you,<br /> 
+            the rhythm beneath your rest.<br /><br />
+        
+            <span class="comments">I love you</span><br /> 
+            not like a <span class="keyword">flame</span>, <span class="comments">destined to vanish,</span><br /> 
+            but like <span class="keyword">gravity</span>,<br /> 
+            <span class="comments">quiet, constant,</span> <span class="keyword">inescapable</span>.<br /><br />
+        
+            More than my <span class="keyword">convictions</span>,<br /> 
+            more than what I once thought was <span class="keyword">unshakable</span>,<br /> 
+            you shook me awake,<br /> 
+            <span class="comments">and I loved you more than the</span> <span class="keyword">rules</span><br /> 
+            <span class="comments">I wrote for myself before you.</span><br /><br />
+        
+            <span class="comments">I </span><span class="keyword">love</span> <span class="comments">you</span><br /> 
+            more than anything that came before.<br /> 
+            <span class="comments"></span>I do.</span><br /> 
+            <span class="keyword">And I <span class="comments">always</span> will.</span><br /><br />
+        
+            <span class="keyword">~Bound in <span class="comments">your love</span></span><br /><br />
+        </div>
+        <div class="heading text-center">
+            <span class="comments">*********</span><br />
+            <span class="comments">END OF POEM</span><br />
+            <span class="comments">*********</span>
+        </div>
+    </div>
+
+    <script src="typewriter.js"></script>
+</body>
+</html>
