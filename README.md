@@ -1,2 +1,2 @@
 # TheBook
-A website for my girlfriend
+A website of poems for my girlfriend
