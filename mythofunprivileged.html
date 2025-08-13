@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myth Of Unprivileged</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a styled look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the poem */
+        body {
+            /* Sets a fallback background color that fills the viewport */
+            background-color: #0A0606;
+        }
+        #code {
+            /* Using Inconsolata for a code-like feel */
+            font-family: "Spectral", serif;
+            color: #E0E0E0; /* A light gray for the main text */
+            font-size: 0.95rem; /* Equivalent to text-lg */
+            line-height: 1.0rem; /* Equivalent to leading-7 */
+            font-weight: 600;
+            font-style: italic;
+        }
+        .heading {
+            font-weight: bold;
+            /* Using 'pre' preserves whitespace and line breaks from <br> tags without allowing wrapping */
+            white-space: nowrap;
+            font-size:1.0rem;
+            line-height: 1.25rem; /* Equivalent to leading-7 */
+
+        }
+        .poem-body {
+            /* Using 'pre-line' collapses whitespace but respects line breaks for the poem content */
+            white-space: pre-line;
+        }
+        .comments {
+            /* A dimmer color for the "commented" parts */
+            color: #FFB347;
+            font-style: italic;
+            font-weight: bold;
+        }
+        .keyword {
+            color: #87CEEB;
+            font-weight: bold;
+        }
+        /* Ensure links inherit the comment color */
+        .comments a {
+            color: inherit;
+        }
+        .space {
+            /* Adds indentation for a code-block feel */
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- Background Image Container -->
+    <!-- This div now centers the image within the viewport. -->
+    <div class="fixed inset-0 z-0 flex items-center justify-center bg-[#070202]">
+        <!-- The image now uses object-contain to fit within the screen without being cropped. -->
+        <img src="images/mythofunprivileged.jpg" 
+             alt="A dark, moody rose" 
+             class="w-full h-full object-contain opacity-70"
+             onerror="this.onerror=null;this.src='https://placehold.co/800x1200/000000/FFFFFF?text=Image+Not+Found';">
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="relative min-h-screen flex items-start justify-start py-2 px-4 sm:p-6 md:p-8 z-10">
+        <!-- The glassmorphism card now has padding. -->
+        <div class="bg-gray-800 bg-opacity-50 backdrop-filter py-2 px-4 rounded-2xl shadow-2xl w-full border border-gray-700" style="backdrop-filter: blur(3px);">
+            <div id="code">
+                <!-- The poem will be "typed" here by the JavaScript below. -->
+            </div>
+        </div>
+    </main>
+
+    <!-- This hidden div contains the original poem structure. The script will use this as the source. -->
+    <div id="source-code" class="hidden">
+    <div class="heading text-center">
+        <span class="heading comments">*********</span><br />
+        <a href="index.html" class="heading comments">The Myth of Unprivileged</a><br />
+        <span class="heading comments">*********</span><br />
+    </div>
+    <div class="poem-body">
+        <br />
+        There was once an infinite void—<span class="comments">Chaos</span><br />
+        Something similar existed <span class="keyword">inside me</span> too,<br />
+        But your <span class="keyword">beauty</span>,<br />
+        Started a <span class="keyword">world</span> within me, completely anew.<br /><br />
+
+        Like <span class="comments">Cronus</span> trying to escape his fate,<br />
+        I <span class="keyword">wish</span> we could too,<br />
+        Become suspended in the <span class="keyword">moments</span>,<br />
+        That feel <span class="keyword">eternal</span>.<br /><br />
+
+        Tell me, <span class="comments">Atlas</span>, what is heavier?<br />
+        The world upon your shoulders, or the weight of my <span class="keyword">heart</span>?<br /><br />
+
+        <span class="comments">Icarus</span> soared too high, burned by ambition,<br />
+        But with you, I find the <span class="keyword">balance</span> that he missed.<br />
+        Like <span class="comments">Prometheus</span> gifting fire to mankind,<br />
+        You ignite within me a <span class="keyword">flame</span> that endures.<br />
+        <span class="comments">Pandora</span> opened her box and set free all torments,<br />
+        Yet <span class="keyword">hope</span> remains with me, shaped in the form of you.<br /><br />
+
+        <span class="comments">Apollo</span>’s pursuit of <span class="comments">Daphne</span> fades in comparison,<br />
+        For I chase no fleeting <span class="keyword">beauty</span>, but something far deeper.<br />
+        And <span class="comments">Narcissus</span>—so lost in his reflection—<br />
+        Never knew the <span class="keyword">joy</span> of seeing his lover’s eyes.<br /><br />
+
+        Like <span class="comments">Pygmalion</span> with his perfect sculpture,<br />
+        Fates got me a <span class="comments">Psyche</span>—<br />
+        With a soul that <span class="keyword">completes</span> me.<br /><br />
+
+        <span class="comments">Eos</span> asked for <span class="comments">Tithonus</span>’s eternal life,<br />
+        But I will never make the mistake,<br />
+        I would never do that as I,<br />
+        Would wish for <span class="keyword">eternal youth</span>,<br />
+        And an eternity with <span class="keyword">you</span>.<br /><br />
+
+        <span class="comments">Dionysus</span> gave <span class="comments">Midas</span> a curse; disguised as a gift,<br />
+        I think you have that touch too,<br />
+        Rather a <span class="keyword">blessing</span> than a curse,<br />
+        For your touch, turned my life to <span class="keyword">gold</span>.<br /><br />
+
+        But when the earth darkened,<br />
+        With <span class="comments">Persephone</span>’s absence,<br />
+        My world would <span class="keyword">wither</span> too— if we grow distant.<br />
+        Like <span class="keyword">winter</span>, cold and lifeless, devoid of bloom.<br /><br />
+
+        <span class="comments">Tantalus</span> suffered eternal thirst and hunger,<br />
+        And I shall too, for only if I knew,<br />
+        When would it be the right moment—the right time,<br />
+        To tell you.<br /><br />
+
+        <span class="comments">Sisyphus</span> pushed his boulder,<br />
+        But for me, it was never in vain.<br />
+        Because you are the <span class="keyword">purpose</span><br />
+        That Sisyphus forever seeks.<br /><br />
+
+        In the <span class="comments">Fields of Mourning</span>, where broken hearts once lingered,<br />
+        If that’s where you ever went to,<br />
+        Like <span class="comments">Orpheus</span> descending for <span class="comments">Eurydice</span>,<br />
+        I shall traverse the depths of hell,<br />
+        for a single glance back at you.<br /><br />
+
+        <span class="comments">Heracles</span>, completing all of his impossible tasks,<br />
+        For I shall complete mine too,<br />
+        Even if I have to wait an eternity,<br />
+        I will wait for you.<br /><br />
+
+        The <span class="comments">Argonauts</span> sailed for the golden fleece,<br />
+        But I think they looked in the wrong place,<br />
+        For you are the hidden <span class="keyword">treasure</span>,<br />
+        I'll always keep.<br /><br />
+
+        <span class="comments">Talos</span> had a weakness, a single nail in his ankle,<br />
+        But you are the thorn in my <span class="keyword">heart</span>, and who can pull that out?<br /><br />
+
+        Interestingly,<br />
+        This tale, like the <span class="comments">Greeks</span>, feels like a myth too,<br />
+        Like someone in a <span class="keyword">fantasy</span> or <span class="keyword">fiction</span><br />
+        That one can only <span class="keyword">dream</span> of,<br />
+        I would name this myth,<br />
+        <span class="keyword">"The myth of Unprivileged"</span><br /><br />
+    </div>
+    <div class="heading text-center">
+        <span class="comments">*********</span><br />
+        <span class="comments">END OF POEM</span><br />
+        <span class="comments">*********</span>
+    </div>
+</div>
+
+    <script src="typewriter.js"></script>
+</body>
+</html>
